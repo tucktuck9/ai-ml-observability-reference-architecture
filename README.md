@@ -35,10 +35,14 @@ A Kubernetes cluster
   - `helm` (tested with v3.15.0)
 
 ### Installation
-`kustomize build --enable-helm deploy/ | kubectl create -f -`
+After you clone this repository, run:
+```
+cd ai-ml-observability-reference-architecture
+kustomize build --enable-helm deploy/ | kubectl create -f -
+```
 
 ### Security
-The installation above uses the default username and password for Grafana and OpenSearch. To change the usernames and passwords, follow:
+The installation above uses the default username and password for Grafana and OpenSearch. To change the usernames and passwords, follow these instructions.
 
 #### Grafana
 Uncomment and set `adminUser` and `adminPassword` in `deploy/prometheus-stack/kustomization.yaml`
